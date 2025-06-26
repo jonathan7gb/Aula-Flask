@@ -14,11 +14,17 @@
     <div class="parteEscrita">
         <h5>@senaisc</h5>
         <p>Bem vindos a aula de Flask!</p>
+        <br>
+        <h5>Bem vindo, {{nome}}</h5>
+        <p>Sua idade: {{idade}}</p>
+        <h5>Meus interesses: </h5>
+        <ul>
+            {% for interesse in interesses %}
+            <li>{{ interesse }}</li>
+            {% endfor %}
+        </ul>
+        <br>
         <a href="{{url_for('sobre')}}">Acessar Página Sobre nós</a>
     </div>
-
-    <footer>
-        <p>&copy; 2025 Projeto Flask</p>
-    </footer>
 </body>
 </html>

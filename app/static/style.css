@@ -33,13 +33,11 @@ h3{
 
 h5{
     font-size: 20px;
-    text-align: center;
     font-weight: 600;
 }
 
 p{
     font-size: 16px;
-    text-align: center;
     font-weight: 400;
 }
 
@@ -48,7 +46,6 @@ a{
     display: flex;
     justify-content: center;
     text-decoration: none;
-    text-align: center;
     color: #ffffff;
     font-weight: 600;
     background-color: #3674B5;
