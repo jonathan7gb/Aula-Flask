@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Flask</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -15,16 +17,27 @@
         <h5>@senaisc</h5>
         <p>Bem vindos a aula de Flask!</p>
         <br>
-        <h5>Bem vindo, {{nome}}</h5>
-        <p>Sua idade: {{idade}}</p>
+        <h5>Bem vindo, {{dicionario.nome}}</h5>
+        <p>Sua idade: {{dicionario.idade}}</p>
         <h5>Meus interesses: </h5>
         <ul>
-            {% for interesse in interesses %}
+            {% for interesse in dicionario.interesses %}
             <li>{{ interesse }}</li>
             {% endfor %}
         </ul>
         <br>
         <a href="{{url_for('sobre')}}">Acessar Página Sobre nós</a>
+    </div>
+
+    <div classs="Boostrap_teste">
+        <button class="btn btn-primary">Botão Primário</button>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">Coluna 01</div>
+            <div class="col-md-6">Coluna 02</div>
+        </div>
     </div>
 </body>
 </html>

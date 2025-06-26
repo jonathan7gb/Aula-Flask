@@ -6,7 +6,13 @@ def homepage():
     nome = "Jonathan"
     idade = 17
     interesses = ["Python", "Flask", "Desenvolvimento Web"]
-    return render_template('index.html', nome=nome, idade=idade, interesses=interesses)
+    
+    dicionario = {
+        'nome': nome,
+        'idade': idade,
+        'interesses': interesses
+    }
+    return render_template('index.html', dicionario=dicionario)
 
 @app.route('/sobre/')
 def sobre():
