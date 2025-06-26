@@ -6,5 +6,5 @@ def homepage():
     return render_template('index.html')
 
 @app.route('/sobre/')
-def about():
+def sobre():
     return render_template('sobre.html')
