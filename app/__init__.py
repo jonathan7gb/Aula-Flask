@@ -12,3 +12,4 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 from app.views import homepage
+from app.models import contato
