@@ -47,8 +47,8 @@ p{
 a{
     display: flex;
     justify-content: center;
-    text-decoration: none;
-    color: #ffffff;
+    text-decoration: none !important;
+    color: #ffffff !important;
     font-weight: 600;
     background-color: #3674B5;
     padding: 10px;
@@ -61,5 +61,5 @@ a{
 a:hover{
    background-color: #f4f4f4;
    border: 1px solid #3674B5;
-   color: #3674B5;
+   color: #3674B5 !important;
 }
