@@ -1,4 +1,4 @@
-from app import app
+from app import app, db
 from flask import render_template, url_for, request
 from app.forms import contatoForm
 
@@ -15,9 +15,6 @@ def homepage():
     }
     return render_template('index.html', dicionario=dicionario)
 
-@app.route('/sobre/')
-def sobre():
-    return render_template('sobre.html')
 
 @app.route('/contato/', methods=['GET', 'POST'])
 def contato():
@@ -25,4 +22,5 @@ def contato():
     context = {}
     if form.validate_on_submit():
         form.save()
+        
     return render_template('contato.html', context=context, form=form)

@@ -1,7 +1,7 @@
 from app import db
 from datetime import datetime
 
-class contato(db.Model):
+class Contato(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     data_envio = db.Column(db.DateTime, default=datetime.now())
     nome = db.Column(db.String, nullable=True)
