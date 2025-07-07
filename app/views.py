@@ -1,5 +1,6 @@
 from app import app
 from flask import render_template, url_for, request
+from app.forms import contatoForm
 
 @app.route('/')
 def homepage():
@@ -20,12 +21,8 @@ def sobre():
 
 @app.route('/contato/', methods=['GET', 'POST'])
 def contato():
+    form = contatoForm()
     context = {}
-    if request.method == 'GET':
-        pesquisa = request.args.get('pesquisa')
-        context.update({'pesquisa':pesquisa})
-    if request.method == 'POST':
-        pesquisa = request.form('pesquisa')
-        print('post', pesquisa)
-        context.update({'pesquisa':pesquisa})
-    return render_template('contato.html', context=context)
+    if form.validate_on_submit():
+        form.save()
+    return render_template('contato.html', context=context, form=form)
