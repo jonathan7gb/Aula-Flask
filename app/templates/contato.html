@@ -9,24 +9,24 @@
 </head>
 <body>
        <div class="container">
-            <div class="row">
-                <h3>Envio de contato</h3>
-                <form action="" method="post" class="row mt-4">
+            <div class="row mt-4">
+                <h3>Envio de Contatos</h3>
+                <form action="" method="post" class="row mt-4 p-4 round border shadow">
                     {{form.csrf_token}}
 
                     {{form.nome.label()}}
-                    {{form.nome()}}
+                    {{form.nome(class="form-control")}}
 
                     {{form.email.label()}}
-                    {{form.email()}}
+                    {{form.email(class="form-control")}}
 
                     {{form.assunto.label()}}
-                    {{form.assunto()}}
+                    {{form.assunto(class="form-control")}}
 
                     {{form.mensagem.label()}}
-                    {{form.mensagem()}}
+                    {{form.mensagem(class="form-control")}}
 
-                    {{form.btnSubmit()}}
+                    {{form.btnSubmit(class="btn btn-primary col-12 mt-3")}}
                 </form>
             </div>
        </div>

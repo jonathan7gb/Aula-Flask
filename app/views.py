@@ -22,5 +22,17 @@ def contato():
     context = {}
     if form.validate_on_submit():
         form.save()
-        
+        return redirect(url_for('homepage'))
     return render_template('contato.html', context=context, form=form)
+
+@app.route('/contato/lista/')
+def contatoLista():
+    if request.method == 'POST':
+        pesquisa = request.args.get('pesquisa', '')
+    dados = contato.query.order_by('nome')
+    
+    if pesquisa != '':
+        dados = dados.filter(nome=pesquisa)
+    
+    context = {'dados' : dados.all()}
+    return render_template('contato_lista.html', context=context)

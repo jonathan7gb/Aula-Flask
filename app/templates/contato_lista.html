@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+       <div class="container">
+            <div class="row mt-4">
+                <h3>Lista de Contatos</h3>
+                
+                <form action="" method="get" class="row">
+                    <div class="col-9">
+                        <input type="text" name="pesquisa" class="form-control">
+                    </div>
+                    <div class="col-3">
+                        <button type="submit" class="btn btn-primary">Pesquisar</button>
+                    </div>
+                </form>
+                <div class="col-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Assunto</th>
+                                <th>Mensagem</th>
+                            </tr>
+                        </thead>
+                        <body>
+                            <tr>
+                                <td>{{context['dados'][0].nome}}</td>
+                                <td>{{context['dados'][0].email}}</td>
+                                <td>{{context['dados'][0].assunto}}</td>
+                                <td>{{context['dados'][0].respondido}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{context['dados'][1].nome}}</td>
+                                <td>{{context['dados'][1].email}}</td>
+                                <td>{{context['dados'][1].assunto}}</td>
+                                <td>{{context['dados'][1].respondido}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{context['dados'][2].nome}}</td>
+                                <td>{{context['dados'][2].email}}</td>
+                                <td>{{context['dados'][2].assunto}}</td>
+                                <td>{{context['dados'][2].respondido}}</td>
+                            </tr>
+                        </body>
+                    </table>
+                </div>
+            </div>
+       </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>    
+</body>
+</html>
