@@ -1,6 +1,7 @@
 from app import app, db
 from flask import render_template, url_for, request, redirect
 from app.forms import contatoForm
+from app.models import Contato
 
 @app.route('/')
 def homepage():
@@ -17,7 +18,7 @@ def homepage():
 
 
 @app.route('/contato/', methods=['GET', 'POST'])
-def contato():
+def contato_cadastro():
     form = contatoForm()
     context = {}
     if form.validate_on_submit():
@@ -27,9 +28,9 @@ def contato():
 
 @app.route('/contato/lista/')
 def contatoLista():
-    if request.method == 'POST':
+    if request.method == 'GET':
         pesquisa = request.args.get('pesquisa', '')
-    dados = contato.query.order_by('nome')
+    dados = Contato.query.order_by('nome')
     
     if pesquisa != '':
         dados = dados.filter(nome=pesquisa)

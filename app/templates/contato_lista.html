@@ -27,28 +27,24 @@
                                 <th>Nome</th>
                                 <th>Email</th>
                                 <th>Assunto</th>
-                                <th>Mensagem</th>
+                                <th>Respondido</th>
                             </tr>
                         </thead>
                         <body>
-                            <tr>
-                                <td>{{context['dados'][0].nome}}</td>
-                                <td>{{context['dados'][0].email}}</td>
-                                <td>{{context['dados'][0].assunto}}</td>
-                                <td>{{context['dados'][0].respondido}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{context['dados'][1].nome}}</td>
-                                <td>{{context['dados'][1].email}}</td>
-                                <td>{{context['dados'][1].assunto}}</td>
-                                <td>{{context['dados'][1].respondido}}</td>
-                            </tr>
-                            <tr>
-                                <td>{{context['dados'][2].nome}}</td>
-                                <td>{{context['dados'][2].email}}</td>
-                                <td>{{context['dados'][2].assunto}}</td>
-                                <td>{{context['dados'][2].respondido}}</td>
-                            </tr>
+                            {% for linha in context.dados %}
+                                <tr>
+                                    <td>{{ linha.nome }}</td>
+                                    <td>{{ linha.email }}</td>
+                                    <td>{{ linha.assunto }}</td>
+                                    <td>
+                                        {% if linha.respondido == 1 %}
+                                            SIM
+                                        {% else %}
+                                            NÃO
+                                        {% endif%}
+                                    </td>
+                                </tr>
+                            {% endfor %}
                         </body>
                     </table>
                 </div>
