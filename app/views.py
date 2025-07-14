@@ -37,3 +37,8 @@ def contatoLista():
     
     context = {'dados' : dados.all()}
     return render_template('contato_lista.html', context=context)
+
+@app.route('/contato/<int:id>')
+def contatoDetalhes(id):
+    return render_template('contato_detalhes.html', id = id)
+    
