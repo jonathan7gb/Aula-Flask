@@ -1,11 +1,16 @@
-pip install requests
 python -m venv venv
 venv\Scripts\activate
-deactivate
 pip install flask
 python.exe -m pip install --upgrade pip
-pip install flask_sqlalchemy
-pip install flask-migrate
+pip install Flask-SQLAlchemy
+pip install Flask-Migrate
+flask db init
+flask db migrate -m "Minha primeira migrate"
+flask db upgrade
+pip install email_validator
+pip install flask_wtf
+pip install requests
+deactivate
 
 git add .
 git commit -m "Implementa filtro por data nos relatórios"
