@@ -18,7 +18,9 @@
             {% endfor %}
         </ul>
         <br>
-        <a href="{{url_for('contato_cadastro')}}">Cadastrar Contato</a>
-        <a href="{{url_for('contatoLista')}}" style="text-align: center;">Lista de Contatos</a>
+        
+        {% include "nav.html" %}
+
+        <img src="{{url_for('static', filename='img/senai.jpg')}}" alt="Imagem logo senai" id="logo">
     </div>
 {% endblock %}
