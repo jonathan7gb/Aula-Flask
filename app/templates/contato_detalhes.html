@@ -5,16 +5,42 @@
 <div class="container">
     
     {%include "nav.html" %}
-    
-    <div class="row mb-3">
 
-        <div class="col-md6">
-            <input type="text" value="">
+    <img src="{{url_for('static', filename='img/pessoa.avif')}}" alt="Imagem pessoa" id="pessoa" class="w-25 mt-5 rounded-circle">
+    
+    <form class="row g-3 mt-5">
+        <div class="col-md-6">
+          <label for="inputName4" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="inputName4" value="{{obj.nome}}" readonly>
         </div>
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" value="{{obj.email}}" readonly>
+        </div>
+        <div class="col-12">
+          <label for="inputAssunto" class="form-label">Assunto</label>
+          <input type="text" class="form-control" id="inputAssunto" value="{{obj.assunto}}" readonly>
+        </div>
+        <div class="col-12">
+            <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" readonly>{{obj.mensagem}}</textarea>
+        </div>
+        <div class="col-md-6">
+          <label for="inputState" class="form-label">Situação</label>
+          <select id="inputState" class="form-select">
+            <option selected>Escolha uma opção</option>
+            <option>Respondido</option>
+            <option>Não Respondido</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="inputID" class="form-label">ID do {{obj.nome}}</label>
+          <input type="text" class="form-control" id="inputID" value="{{obj.id}}">
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary mt-2">Editar Dados</button>
+          </div>
 
-        {{obj.nome}}
-    </div>
-    
 </div>
 
 {% endblock %}

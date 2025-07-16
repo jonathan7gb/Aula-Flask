@@ -87,3 +87,7 @@ a:hover{
     width: 200px;
     margin-top: 2rem;
 }
+
+#pessoa{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.514);
+}
