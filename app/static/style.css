@@ -91,3 +91,17 @@ a:hover{
 #pessoa{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.514);
 }
+
+#abrirPerfil{
+    border: 0;
+    background-color: transparent;
+}
+
+#abrirPerfil:hover{
+    border: 0;
+    background-color: transparent;
+    color: transparent !important;
+    transition: all 0.8s ease;
+    transform: scale(1.1);
+
+}
