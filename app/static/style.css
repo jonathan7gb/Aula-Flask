@@ -47,7 +47,7 @@ p{
 }
 
 
-a{
+.link{
     display: flex;
     justify-content: center;
     text-decoration: none !important;
@@ -61,7 +61,7 @@ a{
     border: 1px solid #3674B5;
 }
 
-a:hover{
+.link:hover{
    background-color: #f4f4f4;
    border: 1px solid #3674B5;
    color: #3674B5 !important;
@@ -93,13 +93,14 @@ a:hover{
 }
 
 #abrirPerfil{
-    border: 0;
-    background-color: transparent;
+    border: 0 !important;
+    background-color: transparent !important;
+    color: transparent !important;
 }
 
 #abrirPerfil:hover{
-    border: 0;
-    background-color: transparent;
+    border: 0 !important;
+    background-color: transparent !important;
     color: transparent !important;
     transition: all 0.8s ease;
     transform: scale(1.1);
