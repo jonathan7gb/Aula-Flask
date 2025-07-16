@@ -40,5 +40,6 @@ def contatoLista():
 
 @app.route('/contato/<int:id>')
 def contatoDetalhes(id):
-    return render_template('contato_detalhes.html', id = id)
+    obj = Contato.query.get(id)
+    return render_template('contato_detalhes.html', obj = obj)
     

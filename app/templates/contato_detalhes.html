@@ -2,8 +2,19 @@
 
 {% block content %}
 
-{%include "nav.html" %}
+<div class="container">
+    
+    {%include "nav.html" %}
+    
+    <div class="row mb-3">
 
-{{id}}
+        <div class="col-md6">
+            <input type="text" value="">
+        </div>
+
+        {{obj.nome}}
+    </div>
+    
+</div>
 
 {% endblock %}
