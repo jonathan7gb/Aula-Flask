@@ -10,7 +10,11 @@ class userForm(FlaskForm):
     email = StringField('E-mail', validators=[DataRequired(), Email()])
     senha = PasswordField('Senha', validators=[DataRequired()])
     confirmacao_senha = PasswordField('Senha', validators=[DataRequired(), EqualTo('senha')])
-    btnSubmit = SubmitField('Enviar')
+    btnSubmit = SubmitField('Cadastrar')
+
+    def validate_email(self, email):
+        if User.query.filter(email=email.data).first():
+            return ValidationError("Usuário já cadastro com esse Email!")
 
 class contatoForm(FlaskForm):
     nome = StringField('Nome', validators=[DataRequired()])
