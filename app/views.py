@@ -1,7 +1,8 @@
 from app import app, db
 from flask import render_template, url_for, request, redirect
-from app.forms import contatoForm
-from app.models import Contato
+from app.forms import contatoForm, userForm
+from app.models import Contato, User
+from app import bcrypt
 
 @app.route('/')
 def homepage():
@@ -43,3 +44,11 @@ def contatoDetalhes(id):
     obj = Contato.query.get(id)
     return render_template('contato_detalhes.html', obj = obj)
     
+@app.route('/cadastrouser/', methods=['GET', 'POST'])
+def cadastro_usuario():
+    form = userForm()
+    context = {}
+    if form.validate_on_submit():
+        form.save()
+        return redirect(url_for('homepage'))
+    return render_template('cadastro_user.html', context=context, form=form)

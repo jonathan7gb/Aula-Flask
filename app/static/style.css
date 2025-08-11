@@ -56,6 +56,7 @@ header{
 
 .botoesLinks{
     display: flex;
+    align-items: center;
     gap: 3rem;
 }
 
@@ -99,4 +100,16 @@ header{
 button{
     border: 1px solid #3674B5 !important;
     background-color: #3674B5 !important;
+}
+
+.Cadastro-User{
+    border: 1px solid white;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.Cadastro-User:hover{
+    background-color: white;
+    color: #3674B5;
+    transition: all 0.5s ease;
 }

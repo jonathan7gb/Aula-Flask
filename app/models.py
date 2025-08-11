@@ -13,7 +13,6 @@ class User(db.Model, UserMixin):
     email = db.Column(db.String(100), nullable=True)
     senha = db.Column(db.String(100), nullable=True)
 
-
 class Contato(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     data_envio = db.Column(db.DateTime, default=datetime.now())
