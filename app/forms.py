@@ -1,9 +1,15 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
-from wtforms.validators import DataRequired, Email
-
+from wtforms import StringField, SubmitField, PasswordField
+from wtforms.validators import DataRequired, Email, EqualTo
 from app import db
 from app.models import Contato
+
+class userForm(FlaskForm):
+    nome = StringField('Nome', validators=[DataRequired()])
+    sobrenome = StringField('Sobrenome', validators=[DataRequired()])
+    email = StringField('E-mail', validators=[DataRequired(), Email()])
+    senha = PasswordField('Senha', validators=[DataRequired()])
+    confirmacao_senha = PasswordField('Senha', validators=[DataRequired(), EqualTo('senha')])
 
 class contatoForm(FlaskForm):
     nome = StringField('Nome', validators=[DataRequired()])
@@ -11,7 +17,7 @@ class contatoForm(FlaskForm):
     assunto = StringField('Assunto', validators=[DataRequired()])
     mensagem = StringField('Mensagem', validators=[DataRequired()])
     btnSubmit = SubmitField('Enviar')
-    
+
     def save(self):
         contato = Contato(
             nome = self.nome.data,
