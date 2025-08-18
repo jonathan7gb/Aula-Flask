@@ -48,9 +48,8 @@ def contatoDetalhes(id):
 @app.route('/cadastrouser/', methods=['GET', 'POST'])
 def cadastro_usuario():
     form = userForm()
-    context = {}
     if form.validate_on_submit():
         user = form.save()
         login_user(user, remember=True)
         return redirect(url_for('homepage'))
-    return render_template('cadastro_user.html', context=context, form=form)
+    return render_template('cadastro_user.html', form=form)

@@ -116,6 +116,22 @@ button{
     transition: all 0.5s ease;
 }
 
+.Cadastro-User-Logado{
+    color: #3674B5 !important;
+    background-color: white;
+    border: 1px solid white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+}
+
+.Cadastro-User-Logado:hover{
+    transition: none !important;
+    transition: none !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+
 .Cadastro-Sair{
     color: #ffffff !important;
     background-color: rgb(235, 62, 62);
@@ -124,10 +140,15 @@ button{
     border-radius: 10px;
 }
 
+
 .Cadastro-Sair:hover{
     background-color: rgb(189, 38, 38);
     border: 1px solid rgb(235, 62, 62);
     padding: 0.5rem 2rem;
     border-radius: 10px;
+    transition: none !important;
+    transition: none !important;
+    transform: none !important;
+    box-shadow: none !important;
 
 }
