@@ -11,7 +11,12 @@
                 <a href="{{url_for('homepage')}}" class="link">Home</a>
                 <a href="{{url_for('contato_cadastro')}}" class="link">Cadastrar Contato</a>
                 <a href="{{url_for('contatoLista')}}" style="text-align: center;" class="link">Lista de Contatos</a>
-                <a href="{{url_for('cadastro_usuario')}}" class="Cadastro-User">Cadastrar Usuário</a>
+                {% if current_user.is_authenticated %}
+                <a href="{{url_for('cadastro_usuario')}}" class="Cadastro-User">{{current_user.nome}} {{current_user.sobrenome}}</a>
+                <a href="" class="Cadastro-Sair">Sair</a>
+                {% else %}
+                <a href="{{url_for('cadastro_usuario')}}" class="Cadastro-User">Faça seu cadastro</a>
+                {% endif %}
             </div>
         </div>
     </header>

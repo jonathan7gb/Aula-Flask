@@ -103,13 +103,31 @@ button{
 }
 
 .Cadastro-User{
+    color: #3674B5 !important;
+    background-color: white;
     border: 1px solid white;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     border-radius: 10px;
 }
 
 .Cadastro-User:hover{
-    background-color: white;
-    color: #3674B5;
+    background-color: #3674B5;
+    color: white !important;
     transition: all 0.5s ease;
+}
+
+.Cadastro-Sair{
+    color: #ffffff !important;
+    background-color: rgb(235, 62, 62);
+    border: 1px solid rgb(235, 62, 62);
+    padding: 0.5rem 2rem;
+    border-radius: 10px;
+}
+
+.Cadastro-Sair:hover{
+    background-color: rgb(189, 38, 38);
+    border: 1px solid rgb(235, 62, 62);
+    padding: 0.5rem 2rem;
+    border-radius: 10px;
+
 }
