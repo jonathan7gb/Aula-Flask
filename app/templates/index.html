@@ -5,18 +5,9 @@
 {% block content %}
     
     <div class="parteEscrita">
-        <h5>@senaisc</h5>
-        <p>Bem vindos a aula de Flask!</p>
-        <br>
-        <h5>Bem vindo, {{dicionario.nome}}</h5>
-        <p>Sua idade: {{dicionario.idade}}</p>
-        <h5>Meus interesses: </h5>
-        <ul>
-            {% for interesse in dicionario.interesses %}
-            <li>{{ interesse }}</li>
-            {% endfor %}
-        </ul>
-        <br>      
+        <h3>SISTEMA DE CONTATOS COM CONTA</h3>
+        <p>Sistema de CRUD de contatos, projeto com fins educacionais desenvolvido em Python Flask</p>
+    <br>      
 
         <img src="{{url_for('static', filename='img/senai.jpg')}}" alt="Imagem logo senai" id="logo">
     </div>

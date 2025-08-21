@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        {%include 'header.html' %}
+            <div class="row mt-4">
+                <h3>Lista de Contatos</h3>
+
+                <div class="col-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Post</th>
+                                <th>Usuário</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <body>
+                            <tr>
+                                {% for linha in posts %}
+                                <tr>
+                                    <td>{{linha.mensagem }}</td>
+                                    <td>{{linha.user_id.nome}}</td>
+                                    <td><a href="{{url_for('PostComentarios', id=linha.id)}}">Detalhes</a></td>
+                                </tr>
+                                {% endfor %}
+                            </tr>
+                        </body>
+                    </table>
+                </div>
+            </div>
+    </div>
+{% endblock %}

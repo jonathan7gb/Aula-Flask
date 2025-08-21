@@ -13,6 +13,12 @@ class User(db.Model, UserMixin):
     email = db.Column(db.String(100), nullable=True)
     senha = db.Column(db.String(100), nullable=True)
 
+     # relacionamento com Post
+    posts = db.relationship('Post', backref='autor', lazy=True)
+
+    # relacionamento com Comentários (opcional se quiser acessar depois)
+    comentarios = db.relationship('PostComentarios', backref='autor', lazy=True)
+
 class Contato(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     data_envio = db.Column(db.DateTime, default=datetime.now())
@@ -21,3 +27,21 @@ class Contato(db.Model):
     assunto = db.Column(db.String(100), nullable=True)
     mensagem = db.Column(db.String(100), nullable=True)
     respondido = db.Column(db.Integer, default=0)
+
+class Post(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    data_criacao = db.Column(db.DateTime, default=datetime.now())
+    mensagem = db.Column(db.String(500), nullable=True)
+    imagem = db.Column(db.String(500), nullable=True, default='default.png')
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=True)
+    comentarios = db.relationship('PostComentarios', backref='post', lazy=True)
+
+    def msg_resumo(self):
+        return f"{self.mensagem[:10]} ..."
+    
+class PostComentarios(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    data_criacao = db.Column(db.DateTime,default=datetime.now)
+    comentario = db.Column(db.String(500), nullable=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=True)
+    post_id = db.Column(db.Integer, db.ForeignKey('post.id'), nullable=True)

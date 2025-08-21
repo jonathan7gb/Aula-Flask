@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root{
+    --cor-primaria: #936BFF;    
+    --cor-fundo-escuro: #1D1E25;
+    --cor-footer: #1D1E25;
+    --cor-fundo-claro: #FCFCFF;
+    --cor-branca: #FFFFFF;
+    --texto-cinza: #7E8492;
+    --font-dm-sans: "DM Sans", sans-serif;
+    --font-inter: "Inter", sans-serif;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-inter);
+    box-sizing: border-box;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+header{
+    background-color: var(--cor-fundo-escuro);
+    padding: 1rem 1rem 0rem 1rem;
+}
+
+.container-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #7E8492;
+    padding-bottom: 0.5rem;
+}
+
+.apresentacao-site{
+    background-color: var(--cor-fundo-escuro);
+    color: var(--cor-branca);
+    padding: 1rem 1rem 0rem 1rem;
+}
+
+.container-apresentacao h1{
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: 2px;
+}
+
+.container-apresentacao h1 img{
+    margin-left: 10px;
+}
+
+.container-apresentacao p{
+    color: var(--texto-cinza);
+    font-weight: 500;
+    margin-top: 1.2rem;
+    line-height: 1.7;
+}
+
+.botoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    gap: 1rem;
+}
+
+.botoes button{
+    padding: 0.8rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
+    border: 0;
+    border-radius: 16px;
+    color: var(--cor-branca);
+    font-family: var(--font-inter);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.botoes #botao1{
+    background-color: var(--cor-primaria);
+}
+
+.botoes #botao2{
+    background-color: var(--cor-fundo-escuro);
+    border: 1px solid var(--cor-branca);
+}
+
+.imagem{
+    width: 100%;
+}
+
+.imagem img{
+    width: 100%;
+}
+
+.empresas{
+    padding: 3rem 1rem;
+}
+
+.container-empresas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-empresas h2{
+    font-size: 32px;
+    text-align: center;
+    width: 90%;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.container-empresas .logos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.container-empresas .logos img{
+    justify-self: start;
+    align-self: center;
+
+}
+
+#img-direita{
+    justify-self: end;
+}
+
+.web-hosting-worries{
+    padding: 3rem 1rem;
+}
+
+.imagem-whw{
+    width: 100%;
+}
+
+.imagem-whw img{
+    width: 100%;
+}
+
+.container-whw h3{
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 1rem;
+    line-height: 1.2;
+}
+
+.container-whw p{
+    color: var(--texto-cinza);
+    margin-top: 1.5rem;
+    width: 95%;
+    line-height: 1.6;
+}
+
+.container-whw button{
+    margin-top: 2rem;
+    border: 0;
+    background-color: var(--cor-primaria);
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem 2.5rem;
+    color: var(--cor-branca);
+    border-radius: 16px;
+}
+
+.features{
+    background-color: var(--cor-fundo-claro);
+    padding: 3rem 1rem;
+}
+
+.texto-features h3{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.texto-features p{
+    color: var(--texto-cinza);
+    width: 95%;
+    line-height: 1.5;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.card{
+    border: 1px solid #EDEDED;
+    border-radius: 16px;
+    padding: 0rem 1.5rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.parte-cima-card{
+    border: 1px solid #EDEDED;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    width: 50%;
+    margin-bottom: 1.5rem;
+}
+
+.linha-card{
+    width: 50%;
+    border: 0;
+    background-color: var(--cor-primaria);
+    height: 3px;
+    border-radius: 3px;
+}
+
+.bola-card{
+    background-color: var(--cor-primaria);
+    width: 14px;
+    height: 14px;
+    border-radius: 50px;
+}
+
+.card .texto{
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.titulo-icon h4{
+    font-size: 24px;
+    margin-left: 1.5rem;
+}
+
+.card .texto p{
+    color: var(--texto-cinza);
+    line-height: 1.5;
+}
+
+.empower-teams{
+    background-color: var(--cor-branca);
+    padding: 3rem 1rem;
+}
+
+.titulo-empower-teams h3{
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.titulo-empower-teams p{
+    color: var(--texto-cinza);
+    line-height: 1.5;
+}
+
+.botoes-empower {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.imagem-empower{
+    margin-top: 3rem;
+}
+
+.texto-empower h4{
+    font-size: 24px;
+    margin-top: 2rem;
+}
+
+.texto-empower p{
+    margin-top: 1rem;
+    color: var(--texto-cinza);
+    line-height: 1.6;
+    width: 95%;
+}
+
+.texto-empower button{
+    margin-top: 2rem;
+    background-color: var(--cor-primaria);
+    border: 0;
+    border-radius: 50px;
+    color: var(--cor-branca);
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
