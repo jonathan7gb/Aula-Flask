@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% include "header.html" %}
+
 {% block content %}
    <div class="container">
         <div class="row mt-4">
@@ -14,7 +16,7 @@
             {{form.imagem.label()}}
             {{form.imagem(class="form-control")}}
 
-            {{form.btnSubmit(class="btn btn-primary col-12 mt-3")}}
+            {{form.btnSubmit(class="btn btn-primary col-12 mt-3 btnEnviar")}}
         </form>
    </div>
 {% endblock %}

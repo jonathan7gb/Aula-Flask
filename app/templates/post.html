@@ -13,7 +13,7 @@
                 <div class="col-12 border rounded p-4 shadow">
                     {{post.mensagem}}
                     <hr>
-                    <img src="{{url_for('static', filename='data/post/{}'.format(post.imagem))}}" style="max-width: 300px;;">
+                    <img src="{{url_for('static', filename='img/{}'.format(post.imagem))}}" style="max-width: 300px;;">
                 </div>
             </div>
             <div class="col-12 mt-3">
@@ -23,12 +23,12 @@
                     {{form.comentario.label()}}
                     {{form.comentario(class="form_control")}}
         
-                    {{form.btnSubmit(class="btn btn-primary col-12 mt-3")}}
+                    {{form.btnSubmit(class="btn btn-primary col-12 mt-3 btnEnviar")}}
                 </form>
             </div>
             <hr>
             <div class="col-12 mt-4 border rounded shadow p-3">
-                <h3>comentários</h3>
+                <h3>Comentários</h3>
                 {% for c in post.comentarios %}
                 <p>
                     <b>Usuario: </b>{{c.user_id.nome}} {{c.user_id.sobrenome}}<br>

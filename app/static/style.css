@@ -152,3 +152,33 @@ button{
     box-shadow: none !important;
 
 }
+
+#semConta{
+    margin-top: 1rem;
+}
+
+#cadastre-se-login{
+    margin-top: 1rem;
+    text-align: center;
+    color: #3674B5;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+#cadastre-se-login:hover{
+    text-decoration: underline;
+    transition: all 0.5s ease-in-out;
+}
+
+.btnEnviar{
+    background-color: #3674B5 !important;
+    border: 1px solid #3674B5 !important;
+}
+
+.btnEnviar:hover{
+    background-color: #245992 !important;
+}
+
+#detalhesPost{
+    color: #3674B5 !important;
+}

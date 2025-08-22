@@ -42,9 +42,9 @@ class LoginForm(FlaskForm):
             if bcrypt.check_password_hash(user.senha, self.senha.data.encode()):
                 return user
             else:
-                raise Exception("Senha Incorreta!")
+                return ("Senha Incorreta!")
         else:
-            raise Exception("Usuário não encontrado!!")
+            return ("Usuário não encontrado!!")
 
 class contatoForm(FlaskForm):
     nome = StringField('Nome', validators=[DataRequired()])
