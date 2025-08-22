@@ -78,8 +78,19 @@ header{
     margin-top: 2rem;
 }
 
-#pessoa{
+.img-pessoa{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 999px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.514);
+    margin-top: 2rem;
+}
+
+#pessoa{
+    object-fit: cover !important;
+    object-position: center !important;
+    width: 100% !important;
 }
 
 .container{

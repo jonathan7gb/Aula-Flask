@@ -6,9 +6,11 @@
 <div class="container">
     
 
-    <img src="{{url_for('static', filename='img/pessoa.avif')}}" alt="Imagem pessoa" id="pessoa" class="w-25 mt-5 rounded-circle">
+  <div class="img-pessoa">
+    <img src="{{url_for('static', filename='img/senai.jpg')}}" alt="Imagem pessoa" id="pessoa" class="w-100">
+  </div>
     
-    <form class="row g-3 mt-5">
+    <form class="row g-3 mt-3">
         <div class="col-md-6">
           <label for="inputName4" class="form-label">Nome</label>
           <input type="text" class="form-control" id="inputName4" value="{{obj.nome}}" readonly>
