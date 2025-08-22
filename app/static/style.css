@@ -113,6 +113,11 @@ button{
     background-color: #3674B5 !important;
 }
 
+.btnExcluir{
+    background-color: rgb(192, 38, 38) !important;
+    border: 1px solid rgb(189, 38, 38) !important;
+}
+
 .Cadastro-User{
     color: #3674B5 !important;
     background-color: white;
@@ -192,4 +197,19 @@ button{
 
 #detalhesPost{
     color: #3674B5 !important;
+}
+
+#detalhesPost:hover{
+    transform: scale(1.1);
+}
+
+table #linhaPost{
+    padding: 0.5rem !important;
+}
+
+tr:hover{
+    background-color: #e6f7ff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+    cursor: pointer;
 }

@@ -18,9 +18,9 @@
                         <body>
                             <tr>
                                 {% for linha in posts %}
-                                <tr>
+                                <tr id="linhaPost">
                                     <td>{{linha.mensagem }}</td>
-                                    <td>{{linha.user_id.nome}}</td>
+                                    <td>{{linha.autor.nome}}</td>
                                     <td><a href="{{url_for('PostComentarios', id=linha.id)}}" id="detalhesPost">Detalhes</a></td>
                                 </tr>
                                 {% endfor %}
