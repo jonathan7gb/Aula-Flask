@@ -95,9 +95,10 @@ class PostComentarioForm(FlaskForm):
      def save(self, user_id, post_id):
         comentario = PostComentarios (
              comentario=self.comentario.data,
-             user_id= user_id,
+             user_id = user_id,
              post_id = post_id
         )
 
         db.session.add(comentario)
         db.session.commit()
+        return comentario

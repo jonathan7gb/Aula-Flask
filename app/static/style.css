@@ -213,3 +213,8 @@ tr:hover{
     transition: all 0.2s ease;
     cursor: pointer;
 }
+
+#comentario{
+    justify-self: start !important;
+    text-align: left !important;
+}

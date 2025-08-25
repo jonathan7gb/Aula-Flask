@@ -96,3 +96,11 @@ def PostComentarios(id):
         form.save(current_user.id, id)
         return redirect(url_for('PostComentarios', id=id))
     return render_template('post.html', post=post, form=form)
+
+@app.route('/contato/excluir/<int:id>', methods=['POST'])
+@login_required
+def excluirContato(id):
+    obj = Contato.query.get_or_404(id)
+    db.session.delete(obj)
+    db.session.commit()
+    return redirect(url_for('contatoLista')) 
