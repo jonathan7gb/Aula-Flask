@@ -63,6 +63,7 @@ header{
 .botoesLinks a{
     text-decoration: none;
     color: white;
+    transition: all 0.5s ease-in-out;
 }
 
 
@@ -266,6 +267,7 @@ tr:hover{
     border-radius: 5px;
     color: white  !important;
     text-decoration: none !important; 
+    transition: all 0.5s ease;
 }
 
 .container-posts .post p{
@@ -281,4 +283,8 @@ tr:hover{
 .container-posts .post #usuario{
     font-weight: 700;
     margin-bottom: 0.5rem;
+}
+
+.container-posts .post .link a:hover{
+    background-color: #245992;
 }

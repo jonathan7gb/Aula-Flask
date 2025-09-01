@@ -37,7 +37,7 @@ class Post(db.Model):
     comentarios = db.relationship('PostComentarios', backref='post', lazy=True)
 
     def msg_resumo(self):
-        return f"{self.mensagem[:10]} ..."
+        return f"{self.mensagem[:20]} ..."
     
 class PostComentarios(db.Model):
     id = db.Column(db.Integer, primary_key=True)
