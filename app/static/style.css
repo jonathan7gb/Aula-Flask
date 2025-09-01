@@ -203,10 +203,6 @@ button{
     transform: scale(1.1);
 }
 
-table #linhaPost{
-    padding: 0.5rem !important;
-}
-
 tr:hover{
     background-color: #e6f7ff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -217,4 +213,72 @@ tr:hover{
 #comentario{
     justify-self: start !important;
     text-align: left !important;
+}
+
+.comentarioInput{
+    background-color: white;
+    padding: 0.3rem 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #3674B5;
+    color: #245992;
+}
+
+.comentarioInput:focus{
+    outline: none;
+    box-shadow: 0 0 5px #3674B5;
+
+}
+
+.comentarioInputLabel{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0.5rem;
+}
+
+.container-posts{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.container-posts .post{
+    padding: 0.5rem;
+    border: 1px solid #3674B5;
+    border-radius: 8px;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: start !important;
+    align-items: center !important;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.container-posts .post .user, .container-posts .post .mensagemmm{
+    display: flex;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.container-posts .post a{
+    background-color: #3674B5;
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+    color: white  !important;
+    text-decoration: none !important; 
+}
+
+.container-posts .post p{
+    width: 100%;
+    text-align: left !important;
+}
+.container-posts .post .link{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+
+.container-posts .post #usuario{
+    font-weight: 700;
+    margin-bottom: 0.5rem;
 }
